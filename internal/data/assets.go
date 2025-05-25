@@ -5,16 +5,16 @@ import (
 	"time"
 )
 
-var skills = map[string]models.Skill{
-	"C++":    {Name: "C++", ImagePath: "static/assets/skills/C++.png"},
-	"C":      {Name: "C", ImagePath: "static/assets/skills/C.png"},
-	"Go":     {Name: "Go", ImagePath: "static/assets/skills/Golang.png"},
-	"Python": {Name: "Python", ImagePath: "static/assets/skills/Python.png"},
-	"Git":    {Name: "Git", ImagePath: "static/assets/skills/Git.png"},
-}
+var (
+	skills = map[string]models.Skill{
+		"C++":    {Name: "C++", ImagePath: "static/assets/skills/C++.png"},
+		"C":      {Name: "C", ImagePath: "static/assets/skills/C.png"},
+		"Go":     {Name: "Go", ImagePath: "static/assets/skills/Golang.png"},
+		"Python": {Name: "Python", ImagePath: "static/assets/skills/Python.png"},
+		"Git":    {Name: "Git", ImagePath: "static/assets/skills/Git.png"},
+	}
 
-func LoadLinks(social bool) []models.Link {
-	links := []models.Link{
+	links = []models.Link{
 		{
 			Url:         "https://github.com/warrenjkim",
 			DisplayName: "warrenjkim",
@@ -34,7 +34,9 @@ func LoadLinks(social bool) []models.Link {
 			AltName:     "YouTube",
 		},
 	}
+)
 
+func LoadLinks(social bool) []models.Link {
 	if social {
 		links = append(links,
 			models.Link{
