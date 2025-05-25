@@ -48,33 +48,6 @@ func LoadLinks(social bool) []models.Link {
 	return links
 }
 
-func LoadHeader() models.Header {
-	return models.Header{
-		Navigation: []models.Link{
-			{
-				Url:         "/about",
-				DisplayName: "About",
-			},
-			{
-				Url:         "/projects",
-				DisplayName: "Projects",
-			},
-			{
-				Url:         "/notes",
-				DisplayName: "Notes",
-			},
-		},
-		Socials: LoadLinks(true),
-	}
-}
-
-func LoadFooter() models.Footer {
-	return models.Footer{
-		Copyright: "&copy; 2025 Warren Kim",
-		Socials:   LoadLinks(true),
-	}
-}
-
 func LoadProjectPreviews() []models.ProjectPreview {
 	parseDate := func(dateStr string) time.Time {
 		t, _ := time.Parse("2006-01-02", dateStr)

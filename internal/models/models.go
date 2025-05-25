@@ -1,7 +1,6 @@
 package models
 
 import (
-	"html/template"
 	"time"
 )
 
@@ -10,26 +9,6 @@ type Link struct {
 	DisplayName string
 	ImagePath   string
 	AltName     string
-}
-
-type Header struct {
-	Navigation []Link
-	Socials    []Link
-}
-
-type Footer struct {
-	Copyright template.HTML
-	Socials   []Link
-}
-
-type Index struct {
-	Header  Header
-	Footer  Footer
-	Name    string
-	Links   []Link
-	About   string
-	Facts   []template.HTML
-	Hobbies []string
 }
 
 type ProjectPreview struct {
@@ -54,7 +33,7 @@ type Skill struct {
 
 type Note struct {
 	Course string
-	Files      []NoteFile
+	Files  []NoteFile
 }
 
 type NoteFile struct {
@@ -64,7 +43,7 @@ type NoteFile struct {
 }
 
 type Courses struct {
-	Ucla []string
+	Ucla               []string
 	IvcSaddlebackMajor []string
 	IvcSaddlebackIgetc []string
 }
