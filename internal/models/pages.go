@@ -17,6 +17,7 @@ type Footer struct {
 type Index struct {
 	Header   Header
 	Footer   Footer
+	Title    string
 	Headshot string
 	Name     string
 	Links    []Link

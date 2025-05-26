@@ -30,6 +30,7 @@ func loadIndex() *models.Index {
 	return &models.Index{
 		Header:   header,
 		Footer:   footer,
+		Title:    "Warren Kim",
 		Headshot: "static/assets/headshot.jpg",
 		Name:     "Warren Kim",
 		Links:    links,
