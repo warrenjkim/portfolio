@@ -47,6 +47,8 @@ func loadIndex() *models.Index {
 				"use occasionally, but it couldn&apos;t handle large files.",
 		},
 		Hobbies: []template.HTML{
+			"I enjoy building keyboards. My current keyboard is a 60% with linear " +
+			"switches.",
 			"I love to climb! I have been climbing for a little over 2 years now, " +
 				"climbing up to and including a V10 indoors and V8 outdoors. I have only " +
 				"climbed outdoors twice (both times to Joshua Tree), so I don&apos;t " +
