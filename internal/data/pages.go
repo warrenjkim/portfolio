@@ -49,7 +49,7 @@ func loadIndex() *models.Index {
 		},
 		Hobbies: []template.HTML{
 			"I enjoy building keyboards. My current keyboard is a 60% with linear " +
-			"switches.",
+				"switches.",
 			"I love to climb! I have been climbing for a little over 2 years now, " +
 				"climbing up to and including a V10 indoors and V8 outdoors. I have only " +
 				"climbed outdoors twice (both times to Joshua Tree), so I don&apos;t " +
@@ -65,12 +65,26 @@ func loadIndex() *models.Index {
 	}
 }
 
+func loadNotes() *models.Notes {
+	return &models.Notes{
+		Header: header,
+		Footer: footer,
+		Title:  "Notes",
+		Notes:  LoadNotes(),
+	}
+}
+
 func LoadPages() []models.Page {
 	return []models.Page{
 		{
 			Path:     "index.html",
 			Template: "index",
 			Context:  loadIndex(),
+		},
+		{
+			Path:     "notes.html",
+			Template: "notes",
+			Context:  loadNotes(),
 		},
 	}
 }

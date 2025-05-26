@@ -1,0 +1,49 @@
+{{ define "notes" }}
+
+{{ template "page-start" . }}
+<title>Notes</title>
+
+<h1 class="title">Notes</h1>
+<hr>
+<section id="notes" class="notes">
+  <p>
+    These are some of the notes for some of the classes I have taken. Some
+    classes are easier to take notes for than others, which is why only certain
+    classes are listed. Feel free to download the
+    <span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> as well!
+  </p>
+
+  <div class="note-links">
+    <ul>
+      {{ range .Notes }}
+      <li>{{ .Course }}</li>
+      <ul>
+        {{ range .Files }}
+        <li>
+          <a href="static/assets/notes/{{ .PdfPath }}">{{ .Name }}</a>,
+          <a href="static/assets/notes/{{ .LatexPath }}"><span class="latex">L<sup>a</sup>T<sub>e</sub>X</span></a>
+        </li>
+        {{ end }}
+      </ul>
+      {{ end }}
+    </ul>
+  </div>
+  <hr>
+  <p>
+    * I lost the most up-to-date <span class="latex">L<sup>a</sup>T<sub>e</sub>X</span>
+    for the midterm notes.
+  </p>
+
+  <br>
+
+  <h2>DISCLAIMER</h2>
+  <hr>
+  <p>
+    These notes are <em>NOT</em> thoroughly checked! As such, there may be inaccuracies. Whatever
+    <em>your</em> professor says goes! Do not take my word for it, I am just a student.
+  </p>
+</section>
+
+{{ template "page-end" . }}
+
+{{ end }}

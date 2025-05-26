@@ -26,6 +26,13 @@ type Index struct {
 	Hobbies  []template.HTML
 }
 
+type Notes struct {
+	Header Header
+	Footer Footer
+	Title  string
+	Notes  []Note
+}
+
 type Page struct {
 	Path     string
 	Template string
