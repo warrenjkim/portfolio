@@ -27,28 +27,23 @@ var (
 			ImagePath:   "static/assets/links/linkedin.webp",
 			AltName:     "LinkedIn",
 		},
-		{
-			Url:         "https://youtube.com/@warren_kim",
-			DisplayName: "@warren_kim",
-			ImagePath:   "static/assets/links/youtube.webp",
-			AltName:     "YouTube",
-		},
+		// {
+		// 	Url:         "https://youtube.com/@warren_kim",
+		// 	DisplayName: "@warren_kim",
+		// 	ImagePath:   "static/assets/links/youtube.webp",
+		// 	AltName:     "YouTube",
+		// },
 	}
+
+	socials = links
+	// append(links,
+	// 		models.Link{
+	// 			Url:         "https://open.spotify.com/artist/3uoZD1Z2Zcv2adealPuYpm?si=F4K44vtISWe9rUj6AKMEbg",
+	// 			DisplayName: "",
+	// 			ImagePath:   "static/assets/links/spotify.webp",
+	// 			AltName:     "Spotify",
+	// 		})
 )
-
-func LoadLinks(social bool) []models.Link {
-	if social {
-		links = append(links,
-			models.Link{
-				Url:         "https://open.spotify.com/artist/3uoZD1Z2Zcv2adealPuYpm?si=F4K44vtISWe9rUj6AKMEbg",
-				DisplayName: "",
-				ImagePath:   "static/assets/links/spotify.webp",
-				AltName:     "Spotify",
-			})
-	}
-
-	return links
-}
 
 func LoadProjectPreviews() []models.ProjectPreview {
 	parseDate := func(dateStr string) time.Time {

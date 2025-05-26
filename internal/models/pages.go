@@ -15,13 +15,20 @@ type Footer struct {
 }
 
 type Index struct {
-	Header  Header
-	Footer  Footer
-	Name    string
-	Links   []Link
-	About   string
-	Facts   []template.HTML
-	Hobbies []string
+	Header   Header
+	Footer   Footer
+	Headshot string
+	Name     string
+	Links    []Link
+	About    string
+	Facts    []template.HTML
+	Hobbies  []template.HTML
+}
+
+type Page struct {
+	Path     string
+	Template string
+	Context  interface{}
 }
 
 // TODO(Notes, Courses, Projects)
