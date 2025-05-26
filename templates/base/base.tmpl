@@ -1,0 +1,105 @@
+{{ define "signature" }}
+<a class="logo" href="/">
+  <div>
+    <svg class="one svg-animation" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M17 3C11.1375 21.611 6.82773 40.2816 4.33334 59.6667C3.79281 63.8673 -1.2254 86.8489 3.66667 91.3333C5.01557 92.5698 7.1535 89.6704 8.11111 88.1111C10.9982 83.41 14.0701 75.2647 15.7778 70.4444C18.8758 61.6995 24.6766 34.6287 24.1111 43.8889C23.3791 55.876 20.5265 68.7905 23.7778 80.6667C26.9089 92.1038 35.8491 87.7762 39.6667 79.4444C46.9367 63.5776 46.3328 43.5753 46.7778 26.5556C46.996 18.2102 46.7151 10.2231 46 2" />
+    </svg>
+
+    <svg class="two svg-animation" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M2 19C6.46775 9.84116 18.1091 4.98814 27.5556 2.88893C35.5866 1.10426 39.99 5.16279 45.8889 9.5556C56.3074 17.314 74.1318 16.7778 86.5 16.7778C107.956 16.7778 129.567 14.9743 151 14" />
+    </svg>
+    <svg class="three svg-animation" xmlns="http://www.w3.org/2000/svg">
+      <path d="M30 2C27.6468 33.4737 17.1713 60.5472 2 88" />
+    </svg>
+    <svg class="four svg-animation" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M55.3979 2C45.2041 14.3883 35.1998 26.3087 22.7312 36.4444C16.4764 41.5291 -3.93259 53.9962 3.67569 51.3333C16.1297 46.9744 33.6822 39.6796 41.3979 55.1111C45.8316 63.9786 49.458 74.1922 60.9535 74.8889C86.3119 76.4258 104.972 66.2969 126.398 55.2778C130.208 53.3181 133.606 50.793 137.065 48.2778C139.549 46.4709 139.354 51.2029 139.842 52.7778C143.553 64.7349 168.603 55.6187 176.842 54.2222C189.407 52.0926 204.935 55.9064 217.287 57.7778C233.062 60.168 246.698 58.7444 262.398 57" />
+    </svg>
+  </div>
+</a>
+{{ end }}
+
+{{ define "header" }}
+<header class="header">
+  <nav class="navbar">
+    <div class="signature-logo">{{ template "signature" . }}</div>
+
+    <ul>
+      {{ range .Header.Navigation }}
+      <li><a href="{{ .Url }}">{{ .DisplayName }}</a></li>
+      {{ end }}
+    </ul>
+
+    <div class="header-links">
+      <ul>
+        {{ range .Header.Socials -}}
+        <li>
+          <a href="{{ .Url }}">
+            <img src="{{ .ImagePath }}" alt="{{ .AltName }}"/>
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+  </nav>
+</header>
+{{ end }}
+
+{{ define "footer" }}
+<footer>
+  <div class="links">
+    <p>{{ .Footer.Copyright }}</p>
+    <ul>
+      {{ range .Footer.Socials -}}
+      <li>
+        <a href="{{ .Url }}">
+            <img src="{{ .ImagePath }}" alt="{{ .AltName }}"/>
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</footer>
+{{ end }}
+
+{{ define "page-start" }}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Warren Kim</title>
+
+  <link rel="stylesheet" href="static/css/base.css" />
+  <link rel="stylesheet" href="static/css/about.css" />
+  <link rel="stylesheet" href="static/css/latex.css" />
+  <link rel="stylesheet" href="static/css/header.css" />
+  <link rel="stylesheet" href="static/css/footer.css" />
+  <link rel="stylesheet" href="static/css/skills.css" />
+  <link rel="stylesheet" href="static/css/homepage.css" />
+  <link rel="stylesheet" href="static/css/projects.css" />
+  <link rel="stylesheet" href="static/css/signature.css" />
+  <link rel="stylesheet" href="static/css/note-links.css" />
+  <link rel="stylesheet" href="static/css/project-skills.css" />
+  <link rel="stylesheet" href="static/css/project-previews.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+</head>
+
+<body>
+  {{ template "header" . }}
+  <main>
+{{ end }}
+
+{{ define "page-end" }}
+  </main>
+  {{ template "footer" . }}
+</body>
+
+</html>
+{{ end }}

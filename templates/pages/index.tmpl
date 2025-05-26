@@ -1,0 +1,56 @@
+{{ define "index" }}
+
+{{ template "page-start" . }}
+<section class="head" id="head">
+  <div class="headshot">
+    <img src="{{ .Headshot }}" />
+  </div>
+  <div class="info">
+    <div>
+      <h1 class="title">Warren Kim</h1>
+      {{ range .Links -}}
+      <p>{{ .AltName }}: <a href="{{ .Url }}">{{ .DisplayName }}</a></p>
+      {{ end }}
+    </div>
+    <div class="about">
+      <h1>About</h1>
+      <hr />
+      <p>
+        I&apos;m a Software Engineer that loves finding elegant solutions to
+        complex problems. I especially enjoy learning about advanced data
+        structures and algorithms. Consequently, a lot of my personal projects
+        trend towards learning about the internals and underlying theory behind
+        computing.
+      </p>
+      <hr />
+    </div>
+  </div>
+</section>
+
+<br>
+
+<section id="facts" class="facts">
+  <h2>Fun Facts</h2>
+  <hr>
+  <ul>
+    {{ range .Facts -}}
+    <li>{{ . }}</li>
+    {{ end }}
+  </ul>
+</section>
+
+<br>
+
+<section id="hobbies" class="hobbies">
+  <h2>Hobbies</h2>
+  <hr>
+  <ul>
+    {{ range .Hobbies -}}
+    <li>{{ . }}</li>
+    {{ end }}
+  </ul>
+</section>
+
+{{ template "page-end" . }}
+
+{{ end }}
