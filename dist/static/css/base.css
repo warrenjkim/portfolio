@@ -1,0 +1,84 @@
+* {
+  font-family: "Computer Modern Sans", sans-serif;
+  margin: 0em;
+  padding: 0em;
+}
+
+html {
+  margin: 0em;
+  padding: 0em;
+}
+
+body {
+  font-family: "Computer Modern Sans", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #DDDDDD;
+  background-color: #151515;
+}
+
+a {
+  color: #DDDDDD;
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+  text-decoration-color: #668373;
+  transition: text-decoration-color 0.25s ease-in-out, color 0.25s ease-in-out;
+}
+
+a:hover {
+  color: #8BB39D;
+  text-decoration-color: #AAAAAA;
+}
+
+h1 {
+  font-size: 28px;
+  text-transform: uppercase;
+  font-weight: lighter;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: lighter;
+  text-transform: uppercase;
+  color: #8BB39D;
+  line-height: 1;
+}
+
+main {
+  width: 80%;
+  max-width: 60rem;
+  margin: 5rem auto;
+}
+
+hr {
+  border: none;
+  height: 0.1em;
+  background-color: #50665A;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+ul {
+  list-style-type: "\2192\0020\0020";
+  padding-left: 3em;
+}
+
+li {
+  margin-bottom: 0.5em;
+  line-height: 1.25;
+}
+
+.title {
+  font-size: 42px;
+}
+
+p {
+  text-align: justify;
+  text-justify: inter-word;
+
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}

@@ -1,0 +1,79 @@
+.logo {
+    margin: 0em;
+    padding: 0em;
+}
+
+.logo div {
+    margin: 0em;
+    padding: 0em;
+    display: flex;
+    align-items: center;
+}
+
+.logo div .one {
+    width: 49px;
+    height: 94px;
+}
+
+.logo div .two {
+    width: 153px;
+    height: 21px;
+    margin-top: 0.75rem;
+}
+
+.logo div .three {
+    width: 35px;
+    height: 90px;
+    margin-right: -1.25rem;
+}
+
+.logo div .four {
+    width: 264px;
+    height: 77px;
+    margin-top: -1rem;
+}
+
+.logo div .svg-animation {
+    fill: none;
+    stroke: #CCCCCC;
+    stroke-width: 3;
+    animation: fade-in 1s ease-in-out, draw 10s forwards;
+}
+
+.logo:hover {
+    .svg-animation {
+        fill: none;
+        stroke: #668373;
+        stroke-width: 3;
+        transition: stroke 0.25s ease-in-out;
+    }
+}
+
+@keyframes draw {
+    from {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+    }
+    to {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fade-in {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 1100px) {
+    .logo div .two {
+        width: 0px;
+        height: 0px;
+    }
+
+    .logo div .four {
+        width: 80px;
+        height: 77px;
+        margin-top: -1rem;
+    }
+}

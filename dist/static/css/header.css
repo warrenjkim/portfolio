@@ -1,0 +1,106 @@
+.header {
+  position: sticky;
+  top: 0em;
+  max-width: 70rem;
+  margin: 0em auto;
+  padding: 0em;
+  background-color: rgba(36, 36, 36, 0.75);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+}
+
+.navbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+}
+
+.signature-logo {
+  position: absolute;
+  top: 0em;
+  left: 0em;
+  display: flex;
+  height: 100%;
+  margin-left: 1em;
+  align-items: center;
+  transform: scale(0.7);
+  transform-origin: left center;
+  transition: transform 0.25s ease-in-out;
+}
+
+.navbar ul {
+  text-align: center;
+  list-style-type: none;
+  margin: 0em;
+  padding: 0em;
+}
+
+.navbar li {
+  display: inline;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  margin-bottom: 0em;
+  font-size: 28px;
+  transition: font-size 0.25s ease-in-out;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.header-links {
+  position: absolute;
+  top: 0em;
+  left: 90%;
+  display: flex;
+  height: 100%;
+  align-items: right;
+}
+
+.header-links ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.header-links ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-links ul li img {
+  height: 1em;
+  width: 1em;
+  margin: 0em 0em;
+  filter: brightness(86.7%); /* approximately #DDDDDD */
+  transition: transform 0.25s ease-in-out;
+}
+
+.header-links ul li img:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 1100px) {
+  .header-links {
+    display: none;
+  }
+}
+
+@media (max-width: 648px) {
+  .signature-logo {
+    transform: scale(0.5);
+    transform-origin: left center;
+  }
+
+  .navbar li {
+    display: inline;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    font-size: 20px;
+  }
+}
+

@@ -1,0 +1,27 @@
+.note-links {
+    padding: 1em 0em;
+}
+
+.note-links ul {
+    list-style-type: none;
+    padding-left: 0em;
+}
+
+.note-links ul li:first-child {
+    padding-top: 0em;
+}
+
+.note-links ul li {
+    font-size: 1.1em;
+    padding-top: 1em;
+}
+
+.note-links ul ul {
+    list-style-type: "\2192\0020\0020";
+    padding-left: 3em;
+}
+
+.note-links ul ul li {
+    font-size: 1em;
+    padding: 0em;
+}

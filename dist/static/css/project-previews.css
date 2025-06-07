@@ -1,0 +1,81 @@
+.project-previews {
+    overflow-x: auto;
+    margin: 0em;
+    padding: 0em;
+    scroll-snap-type: x mandatory;
+}
+
+.project-previews ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0em;
+    padding: 0em;
+}
+
+.project-previews ul li {
+    display: flex;
+    margin: 2em auto;
+    padding: 1em;
+}
+
+.project-container {
+    background-color: #242424;
+    width: 20em;
+    height: auto;
+    border-radius: 1em;
+    margin: 0em 1.5em;
+    padding: 2em;
+    transition: width 0.25s ease-in-out;
+    scroll-snap-align: center;
+}
+
+.project-previews ul li:first-child {
+    margin-left: 3em;
+}
+
+.project-previews ul li:last-child {
+    margin-right: 3em;
+}
+
+.project-container ul li {
+    margin: 1em 0.5em;
+    padding: 0em;
+}
+
+.project-container p {
+    font-size: 24px;
+    text-align: center;
+}
+
+.preview-image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.preview-image-container p {
+    text-align: center;
+    font-size: 1em;
+}
+
+.preview-image-container img {
+    height: 10em;
+    width: auto;
+    border-radius: 0.5em;
+    border: 2px solid #668373;
+    margin: 1em;
+    padding: 0em;
+    transition: height 0.25s ease-in-out;
+}
+
+@media (max-width: 648px) {
+    .project-container {
+        width: 15rem;
+    }
+
+    .preview-image-container img {
+        height: 7.5em;
+        width: auto;
+    }
+}

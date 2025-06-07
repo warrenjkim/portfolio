@@ -1,0 +1,38 @@
+.project-skills {
+    list-style-type: none;
+    margin: 0em;
+    padding: 0em;
+}
+
+.project-skills ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.project-skills ul li {
+    margin: 0em;
+    padding: 0em;
+}
+
+.project-skills ul li img {
+    height: 2em;
+    width: auto;
+    margin: 0em 0.5em;
+    padding: 0em;
+    transition: margin 0.25s ease-in-out;
+}
+
+@media (max-width: 648px) {
+    .project-skills ul li img {
+        margin: 0em 0.25em;
+    }
+}
+
+.project-skills ul li:first-child img {
+    margin-left: 0em;
+}
+
+.project-skills ul li:last-child img {
+    margin-right: 0em;
+}
