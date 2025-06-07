@@ -1,0 +1,43 @@
+{{ define "courses" }}
+{{ template "page-start" . }}
+<title>Courses</title>
+<h1 class="title">Courses</h1>
+<hr>
+<section id="courses" class="courses">
+  <p>
+    These are the courses I have taken (in no particular order).
+  </p>
+
+  <br>
+  <h2>UCLA</h2>
+  <hr>
+  <div class="ucla-courses">
+    <ul>
+      {{ range .Courses.Ucla }}
+      <li>{{ . }}</li>
+      {{ end }}
+    </ul>
+  </div>
+
+  <br>
+
+  <h2>IVC/Saddleback</h2>
+  <hr>
+  <div class="ivc-saddleback-courses">
+    Major Courses:
+    <ul>
+      {{ range .Courses.IvcSaddlebackMajor }}
+      <li>{{ . }}</li>
+      {{ end }}
+    </ul>
+
+    Courses for IGETC:
+    <ul>
+      {{ range .Courses.IvcSaddlebackIgetc }}
+      <li>{{ . }}</li>
+      {{ end }}
+    </ul>
+  </div>
+</section>
+{{ template "page-end" . }}
+{{ end }}

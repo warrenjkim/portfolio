@@ -74,6 +74,15 @@ func loadNotes() *models.Notes {
 	}
 }
 
+func loadCourses() *models.CoursesPage {
+	return &models.CoursesPage{
+		Header:  header,
+		Footer:  footer,
+		Title:   "Courses",
+		Courses: LoadCourses(),
+	}
+}
+
 func LoadPages() []models.Page {
 	return []models.Page{
 		{
@@ -85,6 +94,11 @@ func LoadPages() []models.Page {
 			Path:     "notes.html",
 			Template: "notes",
 			Context:  loadNotes(),
+		},
+		{
+			Path:     "courses.html",
+			Template: "courses",
+			Context:  loadCourses(),
 		},
 	}
 }

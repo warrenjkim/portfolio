@@ -33,6 +33,13 @@ type Notes struct {
 	Notes  []Note
 }
 
+type CoursesPage struct {
+	Header  Header
+	Footer  Footer
+	Title   string
+	Courses Courses
+}
+
 type Page struct {
 	Path     string
 	Template string
