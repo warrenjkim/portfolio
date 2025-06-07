@@ -8,10 +8,10 @@ import (
 var (
 	header = models.Header{
 		Navigation: []models.Link{
-			{
-				Url:         "/projects",
-				DisplayName: "Projects",
-			},
+			// {
+			// 	Url:         "/projects",
+			// 	DisplayName: "Projects",
+			// },
 			{
 				Url:         "/notes",
 				DisplayName: "Notes",
